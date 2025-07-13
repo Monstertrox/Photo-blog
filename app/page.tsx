@@ -31,7 +31,7 @@ export default function RomanticPhotoBlog() {
       title: "Nuestra Primera Cita",
       date: "2024-02-14",
       description:
-        "El día que cambió nuestras vidas para siempre. Caminamos por el parque y supimos que esto era especial.",
+        ".",
       photos: [
         { id: "1", url: "/placeholder.svg?height=400&width=600", alt: "Primera cita en el parque" },
         { id: "2", url: "/placeholder.svg?height=400&width=600", alt: "Sonrisas nerviosas" },
@@ -40,10 +40,10 @@ export default function RomanticPhotoBlog() {
     },
     {
       id: "2",
-      title: "Escapada a la Playa",
+      title: ".",
       date: "2024-06-20",
       description:
-        "Arena entre los dedos, olas susurrando secretos y tu mano en la mía. El mar fue testigo de nuestro amor.",
+        "",
       photos: [
         { id: "4", url: "/placeholder.svg?height=400&width=600", alt: "Caminando por la playa" },
         { id: "5", url: "/placeholder.svg?height=400&width=600", alt: "Construyendo castillos de arena" },
@@ -54,6 +54,8 @@ export default function RomanticPhotoBlog() {
   const [selectedMoment, setSelectedMoment] = useState<Moment | null>(null)
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
   const [isAddingMoment, setIsAddingMoment] = useState(false)
+  const [isEditing, setIsEditing] = useState(false)
+  const [editingMoment, setEditingMoment] = useState<Moment | null>(null) 
   const [newMoment, setNewMoment] = useState({
     title: "",
     date: "",
@@ -79,6 +81,20 @@ export default function RomanticPhotoBlog() {
       setIsAddingMoment(false)
     }
   }
+  const deleteMoment = (id: string) => {
+  setMoments(moments.filter(moment => moment.id !== id))
+}
+const startEditing = (moment: Moment) => {
+  setEditingMoment(moment)
+  setIsEditing(true)
+}
+const updateMoment = () => {
+  if (editingMoment) {
+    setMoments(moments.map(m => (m.id === editingMoment.id ? editingMoment : m)))
+    setEditingMoment(null)
+    setIsEditing(false)
+  }
+}
 
   const addPhotoUrl = () => {
     setNewMoment({
@@ -111,7 +127,7 @@ export default function RomanticPhotoBlog() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="h-8 w-8 text-pink-200" fill="currentColor" />
-            <h1 className="text-4xl font-bold">Nuestros Momentos</h1>
+            <h1 className="text-4xl font-bold">Nuestro Album</h1>
             <Heart className="h-8 w-8 text-pink-200" fill="currentColor" />
           </div>
           <p className="text-xl text-purple-100">Un álbum de amor y recuerdos especiales</p>
@@ -192,6 +208,34 @@ export default function RomanticPhotoBlog() {
               </div>
             </DialogContent>
           </Dialog>
+          <Dialog open={isEditing} onOpenChange={setIsEditing}>
+            <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle className="text-2xl text-purple-700">Editar Momento</DialogTitle>
+              </DialogHeader>
+              {editingMoment && (
+                <div className="space-y-4">
+                  <Input
+                    value={editingMoment.title}
+                    onChange={(e) => setEditingMoment({ ...editingMoment, title: e.target.value })}
+                  />
+                  <Input
+                    type="date"
+                    value={editingMoment.date}
+                    onChange={(e) => setEditingMoment({ ...editingMoment, date: e.target.value })}
+                  />
+                  <Textarea
+                    value={editingMoment.description}
+                    onChange={(e) => setEditingMoment({ ...editingMoment, description: e.target.value })}
+                  />
+                  <div className="flex gap-2 pt-4">
+                    <Button onClick={updateMoment}>Guardar Cambios</Button>
+                    <Button variant="outline" onClick={() => setIsEditing(false)}>Cancelar</Button>
+                  </div>
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
         </div>
 
         {/* Moments Grid */}
@@ -239,6 +283,20 @@ export default function RomanticPhotoBlog() {
                         Ver Momento
                       </Button>
                     </DialogTrigger>
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={() => deleteMoment(moment.id)}
+                    >
+                      Eliminar
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => startEditing(moment)}
+                    >
+                      Editar
+                    </Button>
                     <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                       <DialogHeader>
                         <DialogTitle className="text-2xl text-purple-700 flex items-center gap-2">
