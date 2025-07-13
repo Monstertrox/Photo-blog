@@ -28,25 +28,264 @@ export default function RomanticPhotoBlog() {
   const [moments, setMoments] = useState<Moment[]>([
     {
       id: "1",
-      title: "Nuestra Primera Cita",
-      date: "2024-02-14",
+      title: "Nuestra Cita En Ichiraku",
+      date: "2024-03-29",
       description:
-        ".",
+        "Ese día te veías tan preciosa que no pude evitar no tomarte fotos, un restaurante bonito para estar juntitos.",
       photos: [
-        { id: "1", url: "/placeholder.svg?height=400&width=600", alt: "Primera cita en el parque" },
-        { id: "2", url: "/placeholder.svg?height=400&width=600", alt: "Sonrisas nerviosas" },
-        { id: "3", url: "/placeholder.svg?height=400&width=600", alt: "Atardecer juntos" },
+        { id: "1", url: "/IshirakuRamen.jpg?height=400&width=600", alt: "Primera cita" },
+        { id: "2", url: "/ichiraku_Yuri.webp?height=400&width=600", alt: "Sonrisas nerviosas" },
       ],
     },
     {
       id: "2",
-      title: ".",
-      date: "2024-06-20",
+      title: "Una día en casita y llegada de Maru",
+      date: "2024-07-14",
       description:
-        "",
+        "El día de hacernos novios bonitos pasamos la noche juntos y presenciamos la llegada de Maru con esta foto hermosa que te tomé",
       photos: [
-        { id: "4", url: "/placeholder.svg?height=400&width=600", alt: "Caminando por la playa" },
-        { id: "5", url: "/placeholder.svg?height=400&width=600", alt: "Construyendo castillos de arena" },
+        { id: "3", url: "/Yuri_Maru.webp?height=400&width=600", alt: "Yuri y Maru" },
+        { id: "4", url: "/UnDiaBonito.jpg?height=400&width=600", alt: "Un día bonito" },
+        { id: "5", url: "/Maru.webp?height=400&width=600", alt: "Maru"},
+      ],
+    },
+    {
+      id: "3",
+      title: "Primera vez conociendo mi familia",
+      date: "2024-08-2",
+      description:
+        "El primer día que conociste a mi familia, te recibieron con emapanaditas ricas y le encantaste a tu suegrita.",
+      photos: [
+        { id: "6", url: "/Dos_Preciosas.jpeg?height=400&width=600", alt: "Dos Preciosas" },
+        { id: "7", url: "/doslindas.jpeg?height=400&width=600", alt: "Dos lindas" },
+      ],
+    },
+    {
+      id: "4",
+      title: "Un día en casita felices con nuestro amor",
+      date: "2024-08-17",
+      description:
+        "Un día relajados juntitos demostrando todo el amor hermoso que nos tenemos. Siempre te ves tan hermosa, eres mi diosa",
+      photos: [
+        { id: "8", url: "/17-08(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "9", url: "/17-08(2).jpeg?height=400&width=600", alt: "17-08(2)" },
+        { id: "10", url: "/17-08(3).jpeg?height=400&width=600", alt: "17-08(3)" },
+        { id: "11", url: "/17-08(4).jpeg?height=400&width=600", alt: "17-08(4)" },
+      ],
+    },
+    {
+      id: "5",
+      title: "Cine con mi amorcito",
+      date: "2024-09-07",
+      description:
+        "Fuimos a ver una película juntitos como noviecitos, segunda vez en cine con mi reina prechiosota.",
+      photos: [
+        { id: "12", url: "/7-9(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "13", url: "/7-9(2).jpeg?height=400&width=600", alt: "17-08(2)" },
+        { id: "14", url: "/7-9(3).jpeg?height=400&width=600", alt: "17-08(3)" },
+      ],
+    },
+    {
+      id: "6",
+      title: "Una escapadita de novios.",
+      date: "2024-09-11",
+      description:
+        "Ese día caminamos en el parque de flores y tomamos una politas que no conociamos. Aunque no todo fuera bien en ese momento me alegra pasar rato contigo y demostrarte todo lo que te amo.",
+      photos: [
+        { id: "15", url: "/11-09(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "16", url: "/11-09(2).jpeg?height=400&width=600", alt: "17-08(2)" },
+        { id: "17", url: "/11-09(3).jpeg?height=400&width=600", alt: "17-08(3)" },
+      ],
+    },
+    {
+      id: "7",
+      title: "Nuestro primer viaje a Guatavita.",
+      date: "2024-10-6",
+      description:
+        "Nuestro primer viajecito y fue a la laguna de Guatavita donde aprendimos acerca de ella y el pueblo, comimos delicioso y la pasamos muy rico juntos como nuestro viajecito de novios.",
+      photos: [
+        { id: "18", url: "/06-10(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/06-10(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/06-10(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "21", url: "/06-10(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "22", url: "/06-10(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "23", url: "/06-10(6).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "24", url: "/06-10(7).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "25", url: "/06-10(8).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "26", url: "/06-10(9).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "8",
+      title: "Cumpleaños de josephcito",
+      date: "2024-11-09",
+      description:
+        "Después de todo lo que pasó te agradezco infinitamente haber estado para mí, eres lo que yo más amo y atesoro, volvemos a tomarnos fotitos y a tu casita por el cumpleaños del josephcito.",
+      photos: [
+        { id: "18", url: "/09-11(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/09-11(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/09-11(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/09-11(3).jpeg1.jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "9",
+      title: "Mi cumpleaños",
+      date: "2024-11-18",
+      description:
+        "El día de mi cumpleaños me sorprendiste con la mejor fiesta de cumpleaños que he tenido, fue hermoso ver cómo hiciste todo en secretito y darme esa fiestota bonita. TE AMO",
+      photos: [
+        { id: "18", url: "/18-11(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/18-11(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/18-11(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/18-11(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/18-11(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "10",
+      title: "Concierto Enjambre",
+      date: "2024-11-29",
+      description:
+        "Un concierto increible de una banda increible con el amor de mi vida; amé con todo mi corazón cantar impacto a todo pulmon mirandonos a los ojos.",
+      photos: [
+        { id: "18", url: "/29-11(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/29-11(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/29-11(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/29-11(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "11",
+      title: "En el parque con el amor de mi vida",
+      date: "2024-12-15",
+      description:
+        "Me encantó haber jugado contigo el futbol, haber comido juntitos y llevarte cargadita, un día muy chistoso en familia.",
+      photos: [
+        { id: "18", url: "/15-12(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/15-12(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        ],
+    },
+    {
+      id: "12",
+      title: "CUMPLEAÑOS DEL AMOR DE MI VIDA",
+      date: "2024-12-20",
+      description:
+        "Este día quería sorprenderte totalmente porque mi amorcito bonita merece todo lo hermoso que hay en esta vida y adoro consentirla muchote, espero este día haberte hecho la más feliz porque lo mereces, te amo, mi pastelito de morita. ",
+      photos: [
+        { id: "18", url: "/20-12(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/20-12(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/20-12(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/20-12(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "13",
+      title: "Fin de año juntitos",
+      date: "2024-12-31",
+      description:
+        "Me fascinó haber estado juntos en la mañana de este día, pudimos despedir el año para dar comienzo a uno nuevo juntos, fue muy especial este momento y te veías tan radiante, mi solecito hermosa.",
+      photos: [
+        { id: "18", url: "/31-12(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/31-12(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/31-12(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "21", url: "/31-12(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "22", url: "/31-12(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "23", url: "/31-12(6).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "24", url: "/31-12(7).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "14",
+      title: "Celebrando un día antes el 14 de febrero",
+      date: "2025-02-13",
+      description:
+        "Otra escapadita juntos por una increible razón como la es celebrar nuestro amor gigante.",
+      photos: [
+        { id: "18", url: "/13-02.jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/13-02(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "15",
+      title: "Salida a Monserrate sin miedo a maldiciones.",
+      date: "2025-03-09",
+      description:
+        "Una salida a donde todos dicen que no se debe subir en pareja, pero nuestro amor es más grande que esas maldiciones y estamos destinados a estar juntitos",
+      photos: [
+        { id: "18", url: "/09-3(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/09-3(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "16",
+      title: "Cine en familia",
+      date: "2025-03-23",
+      description:
+        "Fuimos a ver la cenicienta y aunque no estuviera tan buena la película, pudimos disfrutar demasiado todos juntos y reir; en esta salidita tomamos fotos increibles.",
+      photos: [
+        { id: "18", url: "/23-03(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/23-03(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/23-03(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "21", url: "/23-03(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "22", url: "/23-03(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "23", url: "/23-03(6).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "24", url: "/23-03(7).jpeg?height=400&width=600", alt: "17-08(1)" },
+
+      ],
+    },
+    {
+      id: "17",
+      title: "Cita Secretita",
+      date: "2025-04-05",
+      description:
+        "Cita a escondidas con mi amorcito para obtener los juguetes de Minecraft y estar tranquilos juntos. No tienes idea de lo mucho que me tranquiliza tu manita en mi cara, te amo, mi vida.",
+      photos: [
+        { id: "18", url: "/05-04(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/05-04(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/05-04(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+
+      ],
+    },
+    {
+      id: "18",
+      title: "Escapadita para comer",
+      date: "2025-04-30",
+      description:
+        "Aunque no logramos nuestro cometido de comer la buguer master me encantó haber pasado ese tiempo juntos, besarnos y desestresarnos mutuamente; eres mi cura a todos los males, te adoro.",
+      photos: [
+        { id: "18", url: "/30-04(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/30-04(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/30-04(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "21", url: "/30-04(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "22", url: "/30-04(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "19",
+      title: "Nuestra primera Filbo Juntitos",
+      date: "2025-05-03",
+      description:
+        "Decidimos ir juntitos a la Feria del libro y terminamos con muchos libros, amé demasiado tu sonrisa al llevarte un libro que tanto te gustara, me encantó leer cuentos de niños juntitos, le leeremos a nuestros bebés. ES INCREIBLE LO BELLA QUE ERES MI MORENITA PRECIOSA.",
+      photos: [
+        { id: "18", url: "/03-05(1).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "19", url: "/03-05(2).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "20", url: "/03-05(3).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "21", url: "/03-05(4).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "22", url: "/03-05(5).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "23", url: "/03-05(6).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "24", url: "/03-05(7).jpeg?height=400&width=600", alt: "17-08(1)" },
+        { id: "25", url: "/03-05(8).jpeg?height=400&width=600", alt: "17-08(1)" },
+      ],
+    },
+    {
+      id: "20",
+      title: "Cumpleaños de tu awelita bonita",
+      date: "2025-26-03",
+      description:
+        "Me invitaste a los cumpleaños de tu abuelita y por supuesto que no iba a faltar, comimos bien, nos reimos mucho y tu abuelita lo disfrutó, me encantó haberla engañado para que se pusiera más bonita e ir bien arregladita.",
+      photos: [
+        { id: "18", url: "/26-05(1).jpeg?height=400&width=600", alt: "17-08(1)" },
       ],
     },
   ])
